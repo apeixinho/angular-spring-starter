@@ -1,11 +1,12 @@
 # Angular Spring Boot JWT Starter
+
 This sub-project is the backend server portion of the project.
 
-**Make sure you have Maven and Java 1.8 or greater**
+Make sure you have Maven and Java 1.8 or greater.
 
 ```bash
-# change directory to server
-cd angular-spring-starter/server
+# change directory to backend
+cd angular-spring-starter/backend
 
 # install the repo with mvn
 mvn install
@@ -19,10 +20,10 @@ mvn spring-boot:run
 # - Admin - admin:123
 ```
 
-
 ## File Structure
-```
-angular-spring-starter/server
+
+```txt
+angular-spring-starter/backend
  ├──src/                                                        * our source files
  │   ├──main
  │   │   ├──java.com.bfwg
@@ -67,13 +68,13 @@ angular-spring-starter/server
 ```
 
 ## Configuration
-- **WebSecurityConfig.java**: The server-side authentication configurations.
-- **application.yml**: Application level properties i.e the token expire time, token secret etc. You can find a reference of all application properties [here](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html).
-- **JWT token TTL**: JWT Tokens are configured to expire after 10 minutes, you can get a new token by signing in again.
-- **Using a different database**: This Starter kit is using an embedded H2 database that is automatically configured by Spring Boot. If you want to connect to another database you have to specify the connection in the *application.yml* in the resource directory. Here is an example for a MySQL DB:
 
+- __WebSecurityConfig.java__: The server-side authentication configurations.
+- __application.yml__: Application level properties i.e the token expire time, token secret etc. You can find a reference of all application properties [here](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html).
+- __JWT token TTL__: JWT Tokens are configured to expire after 10 minutes, you can get a new token by signing in again.
+- __Using a different database__: This Starter kit is using an embedded H2 database that is automatically configured by Spring Boot. If you want to connect to another database you have to specify the connection in the *application.yml* in the resource directory. Here is an example for a MySQL DB:
 
-```
+```yaml
 spring:
   jpa:
     hibernate:
@@ -85,7 +86,9 @@ spring:
     password: myPassword
     driver-class-name: com.mysql.jdbc.Driver
 ```
+
 *Hint: For other databases like MySQL sequences don't work for ID generation. So you have to change the GenerationType in the entity beans to 'AUTO' or 'IDENTITY'.*
 
 ### Generating password hash for users
+
 I'm using [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) to encode passwords. Your can generate your hashes with this simple tool: [BCrypt Calculator](https://www.dailycred.com/article/bcrypt-calculator)
