@@ -1,7 +1,7 @@
 # Angular Spring Boot JWT Starter
-This sub-project is the frontend UI portion of the project and it was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+This sub-project is the frontend UI portion of the project and it was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.13.
 
-**Make sure you also have NPM 6.9.0, Node 10.15.3 and angular-cli@8.3.21 globally installed**
+**Make sure you also have NPM 6.9.0, Node 10.15.3 and angular-cli@9.1.13 globally installed**
 
 ## File Structure
 ```
@@ -49,7 +49,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `../server/src/main/resorces/static/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `../server/src/main/resources/static/` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
 

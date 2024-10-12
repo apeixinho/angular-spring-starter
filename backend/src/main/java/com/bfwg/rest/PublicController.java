@@ -1,6 +1,7 @@
 package com.bfwg.rest;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +14,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
  * Created by fan.jin on 2017-05-08.
  */
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PublicController {

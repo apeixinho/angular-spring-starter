@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class AccountMenuComponent implements OnInit {
 
-  // TODO define user interface
+  // TODO: define user interface
   user: any;
 
   constructor(
