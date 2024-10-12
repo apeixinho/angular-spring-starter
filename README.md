@@ -141,7 +141,7 @@ npm install
 ng build
 
 # change directory to the repo's backend folder
-cd ../server
+cd ../backend
 
 # install the server dependencies with mvn
 mvn install
