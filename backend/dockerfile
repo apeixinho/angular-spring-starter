@@ -19,7 +19,7 @@ WORKDIR /home/app
 # COPY target/*.jar app.jar
 COPY . $WORKDIR
 
-RUN mvn clean install
+RUN mvn clean verify
 
 # RUN mvn clean install && \
 #     chown -R app:app /home/app && \

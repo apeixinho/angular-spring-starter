@@ -16,6 +16,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 /**
  * Created by fan.jin on 2016-10-15.
  */
@@ -58,6 +60,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public User save(UserRequest userRequest) {
         User user = new User();
         user.setUsername(userRequest.getUsername());

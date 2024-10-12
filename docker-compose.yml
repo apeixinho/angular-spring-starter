@@ -1,8 +1,6 @@
-version: "3" # specify docker-compose version
-
 # Define the services/containers to be run
 services:
-  angular: # name of the first service
+  frontend: # name of the first service
     build: frontend # specify the directory of the Dockerfile
     # volumes:
     # - .:/home/app
@@ -12,14 +10,14 @@ services:
     networks:
     - angular-spring-network
     depends_on:
-    - springboot
+    - backend
     links:
-      - springboot
+      - backend
     #  - springboot:springboot
     # hostname: frontend
     # container_name: frontend
 
-  springboot: #name of the second service
+  backend: #name of the second service
     build: backend # specify the directory of the Dockerfile
     ports:
     - "8080" #specify ports forwarding

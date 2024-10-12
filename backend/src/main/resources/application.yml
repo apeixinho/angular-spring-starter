@@ -7,6 +7,10 @@ jwt:
   secret: queenvictoria
   cookie: AUTH-TOKEN
 
+spring:
+  jpa:
+    open-in-view: false
+
 logging:
   level:
     org.springframework.web: ERROR
