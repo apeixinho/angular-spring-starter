@@ -21,11 +21,15 @@ export class ApiCardComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.responseObj);
+    // console.log(this.responseObj);
   }
 
   onButtonClick() {
-    this.expand = true;
+    if (this.expand) {
+      this.expand = false;
+    } else {
+      this.expand = true;
+    }
     this.apiClick.next(this.apiText);
   }
 
